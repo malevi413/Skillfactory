@@ -14,7 +14,7 @@ for ticket in range(amount_tickets):
         order_cost += 1390
         print('Стоимость билета: 1390 ₽.')
 if amount_tickets > 3:
-    order_cost = order_cost - ((order_cost / 100) * discount)
+    order_cost = order_cost - order_cost / 100 * discount
     print(f'Поздравляю! Вы получаете скидку 10% за количество участников. Сумма к оплате {round(order_cost,2)} ₽.')
 else:
     print(f'Итоговая сумма к оплате {order_cost} ₽.')
