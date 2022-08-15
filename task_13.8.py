@@ -1,10 +1,10 @@
 order_cost = 0
 discount = 10
-number_tickets = int(input('Сколько билетов Вам необходимо? '))
+amount_tickets = int(input('Сколько билетов Вам необходимо? '))
 
-for i in range(number_tickets):
-    i += 1
-    age_visitors = int(input(f'Для какого возраста билет №{i}? '))
+for ticket in range(amount_tickets):
+    ticket += 1
+    age_visitors = int(input(f'Для какого возраста билет №{ticket}? '))
     if age_visitors < 18:
         print('Сегодня детям бесплатно!')
     elif 18 <= age_visitors < 25:
@@ -13,7 +13,7 @@ for i in range(number_tickets):
     else:
         order_cost += 1390
         print('Стоимость билета: 1390 ₽.')
-if number_tickets > 3:
+if amount_tickets > 3:
     order_cost = order_cost - ((order_cost / 100) * discount)
     print(f'Поздравляю! Вы получаете скидку 10% за количество участников. Сумма к оплате {round(order_cost,2)} ₽.')
 else:
